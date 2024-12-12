@@ -1,0 +1,888 @@
+body {
+    background-color:black; 
+    font-family: 'Space Grotesk';
+    color: white; 
+    margin: 25px 55px;
+}
+
+header {
+    color: white;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0; 
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; 
+    font-size: 20px;
+    font-weight: normal;
+    gap: 40px; 
+    flex-grow: 1; 
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-us-button {
+    font-size: 20px;
+    background-color: transparent; 
+    padding: 15px 30px; 
+    color: white; 
+    text-decoration: none;
+    border-radius: 14px;
+    border: 1px solid white; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.contact-us-button:hover {
+    background-color: white; 
+    color: black; 
+}
+
+/* Intro section layout */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns items to the top */
+    margin: 30px 0;  
+}
+
+/* Text section */
+.intro .text {
+    max-width: 600px;
+}
+
+.intro .text h1 {
+    font-size: 60px;
+    line-height: 1.2;
+}
+
+.intro .text p {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px; /* Space between the paragraph and the grid */
+}
+
+.intro-blue-text {
+    color: #2A7EF8; /* Matches the blue from the image */
+}
+
+/* Grid container for contact information */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for grid items */
+    grid-gap: 20px; /* Space between grid items */
+    max-width: 800px; /* Limit width */
+    margin-top: 15px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Required for the pseudo-element */
+    border: 2px solid #2A7EF8; /* Blue border */
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+    color: white;
+    padding: 15px 20px; /* Reduced padding for compact height */
+    border-radius: 10.75px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+.grid-item::before {
+    content: "";
+    position: absolute;
+    top: 15%; /* Position the line vertically */
+    bottom: 15%; /* Ensure the line doesn't go edge to edge */
+    left: 43%; /* Place the line in the center */
+    width: 2px; /* Thickness of the line */
+    background-color: #2A7EF8; /* Blue color for the line */
+}
+
+.grid-item h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2A7EF8;
+    margin: 0;
+    
+}
+
+.grid-item p {
+    font-size: 16px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Main container */
+.main-container {
+    display: flex; /* Ensure left and right sides align next to each other */
+}
+
+.right-side {
+    flex: 0 0 300px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding-left: 20px; 
+}
+
+.right-side img {
+    padding-top: 20px;
+    max-width: 150%; /* Ensures image stays responsive */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(28%); /* Adjust horizontal position if needed */
+}
+
+.subset {
+    font-size: 18px;
+    padding-left: 50px;
+}
+
+.contact-section {
+    padding-top: 40px;
+}
+.contact-section h1{
+    font-size: 40px;
+}
+
+.contact-form-container {
+    background-color: #000000; 
+    padding: 10px 40px; 
+    border-radius: 45px; 
+    border: 2px solid #FFFFFF; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.radio input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;  /* White border for unselected */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio input[type="radio"]:checked {
+    background-color: transparent;
+    border: 2px solid #ffffff; /* Border remains white when selected */
+}
+
+.radio input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #0057ff; /* Blue inner circle */
+    border-radius: 50%;
+    position: absolute;
+}
+
+.radio-label {
+    color: white;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+} 
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+button.submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #4460f1;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 40px;
+    background-color: #2A7EF8;
+    border-radius: 45px;
+    padding: 40px 60px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between links and logos */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Full width */
+}
+
+.footer-section {
+    display: flex; /* Use flexbox for footer sections */
+    align-items: center; /* Align items vertically within sections */
+    justify-content: space-between; /* Space out child elements */
+    width: 100%; /* Full width */
+}
+.footer-section h3
+{
+    font-size: 20px;
+}
+.footer-section p{
+    font-size: 18px;
+}
+
+.links {
+    font-size: 18px;
+    display: flex; /* Use flexbox for links */
+    justify-content: center; /* Center the links */
+    gap: 15px; /* Space between links */
+    flex: 1; /* Allow it to grow to fill available space */
+}
+
+.links a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Align social icons to the right */
+.social {
+    display: flex; /* Use flexbox for social icons */
+    justify-content: flex-end; /* Align social icons to the right */
+    gap: 15px; /* Space between social icons */
+}
+
+.social a img {
+    width: 24px; /* Set the size of the social icons */
+}
+.footer-section .right{
+    padding-right: 130px ;
+}
+
+.footer-section input[type="email"] {
+    width: 285px; /* Set width to 285 pixels */
+    padding: 10px; /* Padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid white; /* Thin white border */
+    background-color: #2A7EF8; /* Blue background */
+    color: white; /* Text color */
+}
+
+/* Style the placeholder text */
+.footer-section input[type="email"]::placeholder {
+    color: white; /* White placeholder text */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.footer-section button {
+    border: none;
+    background-color: #2A7EF8;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.footer-section button:hover {
+    background-color: black;
+    color: white; /* Keep text color white */
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #A7A9BE; /* Border at the top */
+    padding-top: 10px; /* Space above the border */
+    margin-top: 10px; /* Space between form and border */
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px; /* Padding inside the footer section */
+    margin-bottom: 10px; /* Space between the form and footer-bottom */
+}
+.right button{
+    font-size: 20px;
+}
+
+@media (max-width: 580px)  {
+    body { 
+        margin: 0.8em 2.7em; /* 25px 55px */
+        box-sizing: border-box; /* Ensures padding and margins don't add extra width */
+    }
+    .logo {
+        font-size: 0.7em;
+    }
+    .nav-links {
+        font-size: 0.6em;
+        gap: 0.4em; 
+    }
+    .contact-us-button {
+        font-size: 0.6em; 
+        padding: 0.7em 0.8em; 
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+        margin: 15px 0; /* Reduced margin */
+    }
+
+    /* Text section */
+    .intro .text {
+        max-width: 100%; /* Take full width of the container */
+    }
+
+    .intro .text h1 {
+        font-size: 1.5em; /* Drastically reduce font size */
+        line-height: 1.2;
+    }
+
+    .intro .text p {
+        font-size: 0.6em; /* Reduce paragraph font size */
+        margin-bottom: 10px; /* Reduce spacing between paragraph and grid */
+    }
+
+    .intro-blue-text {
+        color: #2A7EF8; /* Retain blue text color */
+    }
+
+    /* Grid container for contact information */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Switch to single-column layout */
+        grid-gap: 1em; /* Reduce spacing between grid items */
+        margin-top: 1em; /* Reduce spacing above the grid */
+    }
+
+    .grid-item {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 0.6em; /* Adjust text size for grid content */
+    }
+
+    .grid-item h3 {
+        font-size: 1em; /* Reduce header font size */
+    }
+
+    .grid-item p {
+        font-size: 0.6em; /* Smaller text size */
+    }
+
+    /* Main container */
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Only one column in grid */
+        grid-template-rows: auto; /* Allow content to flow naturally */
+        gap: 15px; /* Spacing between content */
+        align-items: flex-start;
+    }
+    .left-side {
+        width: 60%; /* Use 60% of the width for the text and grid */
+    }
+
+    .right-side {
+        width: 35%; /* Use 35% of the width for the image */
+        display: flex;
+        justify-content: center; /* Center the image horizontally */
+        align-items: flex-start; /* Align the image at the top */
+        margin-left: 10px; /* Add space between grid and image */
+    }
+
+    .right-side img {
+        max-width: 80%; /* Scale image to fit within its container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+
+    .radio-label {
+        font-size: 0.8em;
+    }
+
+    .radio input[type="radio"] {
+        width: 15px;
+        height: 15px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-size: 0.8em;
+    } 
+
+    input[type="text"], input[type="email"], textarea {
+        width: 60%;
+        height: 40%;
+        padding: 5px;
+        font-size: 0.7em;
+        margin-bottom: 1em;
+        border-radius: 8px;
+    }
+    .radio input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 7px;
+        background-color: #0057ff; /* Blue inner circle */
+        border-radius: 50%;
+        position: absolute;
+    }
+    
+    textarea {
+        padding: 5px; /* Adjust padding to reduce height */
+        font-size: 0.7em; /* Smaller font size */
+        height: 6em; /* Set a specific height to control the size */
+        margin-bottom: 15px; /* Adjust margin if needed */
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+    }
+
+    button.submit-button {
+        width: 80%;
+        padding: 7px;
+        font-size: 0.6em;
+    }
+
+    .form-image img {
+            width: 8.5em;  
+            height: 100%; 
+            object-fit: contain; 
+    }
+    .footer-section h3
+    {
+     font-size: 0.8em;
+    }
+
+    .footer-section p{
+        font-size: 0.6em;
+    }
+    .links {
+        font-size: 0.6em;
+        gap: 0.5em;
+    }
+
+    .social a img {
+        width: 0.5em; /* Set the size of the social icons */
+    }
+    
+    .footer {
+        margin-top: 40px;
+        background-color: #2A7EF8;
+        border-radius: 45px;
+        padding: 30px 40px;
+        color: #fff;
+    }
+    
+    .footer-content {
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Space between links and logos */
+        align-items: center; /* Align items vertically */
+        width: 100%; /* Full width */
+        flex-wrap: nowrap; /* Prevent items from wrapping to a new line */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+    
+    .footer-section {
+        display: flex; /* Use flexbox for footer sections */
+        align-items: center; /* Align items vertically within sections */
+        justify-content: space-between; /* Space out child elements */
+        width: 100%; /* Full width */
+    }
+    .footer-section h3
+    {
+        font-size: 0.6em;
+    }
+    .footer-section p{
+        font-size: 0.6em;
+    }
+    
+    .links {
+        font-size: 0.5em;
+        display: flex; /* Use flexbox for links */
+        justify-content: center; /* Center the links */
+        gap: 0.5em; /* Space between links */
+        flex: 1; 
+    }
+        
+    .social {
+        display: flex; /* Use flexbox for social icons */
+        justify-content: flex-end; /* Align social icons to the right */
+        gap: 15px; /* Space between social icons */
+    }
+    
+    .social a img {
+        width: 0.6em; /* Set the size of the social icons */
+    }
+    .footer-section .right{
+        padding-right: 10px ;
+    }
+ 
+    .footer-section input[type="email"] {
+        width: 5em; 
+        font-size: 0.6em;
+        padding: 5px; /* Padding for better spacing */
+        border-radius: 10px; /* Rounded corners */
+        border: 1px solid white; /* Thin white border */
+        background-color: #2A7EF8; /* Blue background */
+        color: white; /* Text color */
+    }
+    
+    /* Style the placeholder text */
+    .footer-section input[type="email"]::placeholder {
+        color: white; /* White placeholder text */
+        opacity: 0.8; /* Slightly transparent */
+    }
+    
+    .footer-section button {
+        padding: 4px 5px;
+        border-radius: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 0.6em;
+        text-align: center;
+        border-top: 1px solid #A7A9BE; /* Border at the top */
+        padding-top: 10px; /* Space above the border */
+        margin-top: 10px; /* Space between form and border */
+    }
+    
+    .footer-section {
+        width: 100%;
+        padding: 0px; /* Padding inside the footer section */
+        margin-bottom: 10px; /* Space between the form and footer-bottom */
+    }
+
+    .right{
+        padding-left: 1em;
+    }
+    .right button{
+        font-size: 0.5em;
+        margin-left: 0em;
+    }
+    
+}
+@media (max-width: 780px)  {
+    body { 
+        margin: 0.8em 2.7em; /* 25px 55px */
+        box-sizing: border-box; /* Ensures padding and margins don't add extra width */
+    }
+
+    .logo {
+        font-size: 0.7em;
+    }
+    .nav-links {
+        font-size: 0.6em;
+        gap: 0.4em; 
+    }
+    .main-container {
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        max-width: 100%;
+    }
+    
+    .left-side {
+        flex: 1 1 50%; /* Take up 50% of the width on larger screens */
+        padding: 0.5em;
+    }
+    
+    .right-side {
+        flex: 1 1 50%; /* Take up 50% of the width on larger screens */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align image to the left */
+        padding: 0.5em;
+    }
+    
+    .text h1 {
+        font-size: 1em; /* Smaller heading */
+        margin-bottom: 0.1em;
+    }
+    
+    .text p {
+        font-size: 0.75em; /* Smaller paragraph font */
+        margin-bottom: 0.2em;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-gap: 5px; /* Small gap for compact layout */
+        width: 100%; /* Full width of the container */
+        margin-top: 10px;
+    }
+    
+    .grid-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        border: 1px solid #2A7EF8; /* Thin border */
+        background-color: rgba(255, 255, 255, 0.05);
+        color: white;
+        padding: 4px 6px; /* Reduced padding */
+        border-radius: 5px; /* Smaller rounded corners */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .grid-item::before {
+        content: "";
+        position: absolute;
+        top: 10%; /* Adjust line positioning */
+        bottom: 10%;
+        left: 48%; /* Center divider */
+        width: 1px; /* Thin divider line */
+        background-color: #2A7EF8;
+    }
+    
+    .grid-item h3 {
+        font-size: 10px; /* Smaller font size */
+        font-weight: 500;
+        color: #2A7EF8;
+        margin: 0;
+    }
+    
+    .grid-item p {
+        font-size: 10px; /* Smaller font size */
+        margin: 0;
+        padding-left: 5px;
+    }
+    
+    .right-side img {
+        max-width: 80px; /* Smaller image */
+        height: auto;
+        border-radius: 5px;
+        margin-left: 0; /* Align image flush to the left */
+        margin-right: auto;
+        padding-top: 5px;
+    }
+
+    .contact-section {
+        padding-top: -8em;
+    }
+  
+    .contact-us-button {
+        font-size: 0.6em; 
+        padding: 0.7em 0.8em; 
+    }
+    .contact-form-container{
+        padding:30px;
+    }
+    .contact-section h1{
+        font-size: 1.4em;
+    }
+    
+    .contact-section {
+        padding-top: 1.4em;
+    }
+
+    .radio-label {
+        font-size: 0.8em;
+    }
+
+    .radio input[type="radio"] {
+        width: 15px;
+        height: 15px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-size: 0.8em;
+    } 
+
+    input[type="text"], input[type="email"], textarea {
+        width: 60%;
+        height: 40%;
+        padding: 5px;
+        font-size: 0.7em;
+        margin-bottom: 1em;
+        border-radius: 8px;
+    }
+
+    textarea {
+        padding: 5px; /* Adjust padding to reduce height */
+        font-size: 0.7em; /* Smaller font size */
+        height: 6em; /* Set a specific height to control the size */
+        margin-bottom: 15px; /* Adjust margin if needed */
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+    }
+
+    button.submit-button {
+        width: 80%;
+        padding: 7px;
+        font-size: 0.6em;
+    }
+
+    .form-image img {
+            width: 8.5em;  
+            height: 100%; 
+            object-fit: contain; 
+    }
+    .footer-section h3
+    {
+     font-size: 0.8em;
+    }
+
+    .footer-section p{
+        font-size: 0.6em;
+    }
+    .links {
+        font-size: 0.6em;
+        gap: 0.5em;
+    }
+
+    .social a img {
+        width: 0.5em; /* Set the size of the social icons */
+    }
+    
+    .footer {
+        margin-top: 40px;
+        background-color: #2A7EF8;
+        border-radius: 45px;
+        padding: 30px 40px;
+        color: #fff;
+    }
+    
+    .subset {
+        font-size: 0.28em;
+        padding-left: 2.6em;
+    }
+    
+    .footer-content {
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Space between links and logos */
+        align-items: center; /* Align items vertically */
+        width: 100%; /* Full width */
+        flex-wrap: nowrap; /* Prevent items from wrapping to a new line */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+    
+    .footer-section {
+        display: flex; /* Use flexbox for footer sections */
+        align-items: center; /* Align items vertically within sections */
+        justify-content: space-between; /* Space out child elements */
+        width: 100%; /* Full width */
+    }
+    .footer-section h3
+    {
+        font-size: 0.6em;
+    }
+    .footer-section p{
+        font-size: 0.6em;
+    }
+    
+    .links {
+        font-size: 0.5em;
+        display: flex; /* Use flexbox for links */
+        justify-content: center; /* Center the links */
+        gap: 0.5em; /* Space between links */
+        flex: 1; 
+    }
+        
+    .social {
+        display: flex; /* Use flexbox for social icons */
+        justify-content: flex-end; /* Align social icons to the right */
+        gap: 15px; /* Space between social icons */
+    }
+    
+    .social a img {
+        width: 0.6em; /* Set the size of the social icons */
+    }
+    .footer-section .right{
+        padding-right: 10px ;
+    }
+ 
+    .footer-section input[type="email"] {
+        width: 5em; 
+        font-size: 0.6em;
+        padding: 5px; /* Padding for better spacing */
+        border-radius: 10px; /* Rounded corners */
+        border: 1px solid white; /* Thin white border */
+        background-color: #2A7EF8; /* Blue background */
+        color: white; /* Text color */
+    }
+    
+    /* Style the placeholder text */
+    .footer-section input[type="email"]::placeholder {
+        color: white; /* White placeholder text */
+        opacity: 0.8; /* Slightly transparent */
+    }
+    
+    .footer-section button {
+        padding: 4px 5px;
+        border-radius: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 0.6em;
+        text-align: center;
+        border-top: 1px solid #A7A9BE; /* Border at the top */
+        padding-top: 10px; /* Space above the border */
+        margin-top: 10px; /* Space between form and border */
+    }
+    
+    .footer-section {
+        width: 100%;
+        padding: 0px; /* Padding inside the footer section */
+        margin-bottom: 10px; /* Space between the form and footer-bottom */
+    }
+
+    .right{
+        padding-left: 1em;
+    }
+    .right button{
+        font-size: 0.5em;
+        margin-left: 0em;
+    }
+}
+  
